@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graficos</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Indicadores</h1>
+  <p>Representación de salarios:</p>
+  
+  <label for="inputPropiedades">Agrupación por:
+    <input id="inputPropiedades" list="propiedadesPersonas" onchange="representar()" name="inputPropiedades">
+  </label>
+  <datalist id="propiedadesPersonas">
+    <option value="title">title</option>
+    <option value="gender">gender</option>
+    <option value="country">country</option>
+    <option value="city">city</option>
+    <option value="credit_card">credit_card</option>
+    <option value="company_name">company_name</option>
+  </datalist>
+
+  <label for="inputIndicador">Indicador:
+    <input id="inputIndicador" list="indicadorPersonas" onchange="representar()" name="inputPropiedades">
+  </label>
+  <datalist id="indicadorPersonas">
+    <option value="suma">suma</option>
+    <option value="mediana">mediana</option>
+    <option value="promedio">promedio</option>
+    <option value="moda">moda</option>
+  </datalist>
+  <br>
+  <br>
+  <div id="Chart">
+    <canvas id="myChart"></canvas>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./data.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
